@@ -77,44 +77,17 @@ textarea:focus {
 button {
   cursor: pointer;
   border: none;
-  border-radius: 50%;
-  padding-bottom: 10px;
-  width: 80px;
-  height: 80px;
-
-  transition: all 0.2s ease-in-out;
-  background-color: rgb(145, 4, 4);
-  color: var(--color-dark);
-  /* border-bottom: 8px solid rgb(109, 3, 3); */
   border: 2px solid rgb(109, 3, 3);
   box-shadow: 0 6px rgb(109, 3, 3), 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(145, 4, 4);
 }
 
-button:hover,
-button:focus {
-  /* background: rgb(145, 4, 4);
-  box-shadow: 0 0 0 3px rgb(219, 64, 64), 0 0 0 4px rgb(145, 4, 4);*/
-  outline: none;
-  box-shadow: 0 4px rgb(109, 3, 3), 0 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(1px);
-  top: 1px;
-}
-
-button:active {
-  /* box-shadow: 0 0 0 3px var(--color), 0 0 0 4px var(--color); */
+.active {
   box-shadow: 0 2px rgb(109, 3, 3), 0 2px 6px rgba(0, 0, 0, 0.2);
   transform: translateY(2px);
+  opacity: 70%;
   top: 2px;
-}
-
-button:disabled {
-  opacity: 0.5;
-  cursor: wait;
-}
-
-hr {
-  border: 2px solid black;
-  margin: 2rem auto;
 }
 
 .itens-container {
@@ -122,9 +95,26 @@ hr {
   grid-template-columns: 200px 200px 200px;
 }
 
-#item {
+.item {
   margin-left: 30px;
   margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding-bottom: 10px;
+}
+
+item:hover,
+item:focus {
+  outline: none;
+  box-shadow: 0 4px rgb(109, 3, 3), 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+  top: 1px;
+}
+
+item:disabled {
+  opacity: 0.5;
+  cursor: wait;
 }
 
 .game {
@@ -132,10 +122,30 @@ hr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .game h1 {
   margin-bottom: 5vh;
   color: white;
   text-align: center;
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vh;
+  height: 5vh;
+  border-radius: 6px;
+  margin-top: 30px;
+  margin-right: 60px;
+  cursor: pointer;
+  background-color: #19f;
+  color: black;
+  box-shadow: none;
+  border: none;
 }
