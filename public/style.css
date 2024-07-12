@@ -104,8 +104,8 @@ button {
   padding-bottom: 10px;
 }
 
-item:hover,
-item:focus {
+.item:hover,
+.item:focus {
   outline: none;
   box-shadow: 0 4px rgb(109, 3, 3), 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(1px);
